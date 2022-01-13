@@ -3,13 +3,14 @@ class DBConnection {
     private $db;
     static private $instance = null;
 
-    $host = getenv('DB_HOST');
-    $user = getenv('DB_USERNAME');
-    $pass = getenv('DB_PASSWORD');
-    $db   = getenv('DB_DATABASE');
-    $port = getenv('DB_PORT');
 
     private function __construct() {
+        $host = getenv('DB_HOST');
+        $user = getenv('DB_USERNAME');
+        $pass = getenv('DB_PASSWORD');
+        $db   = getenv('DB_DATABASE');
+        $port = getenv('DB_PORT');
+        
         $this->db = new mysqli($host, $user, $pass, $db, $port);
 
         // Check connection
