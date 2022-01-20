@@ -1,3 +1,5 @@
+<?php include 'cinema/model/Movie.php'?>
+
 <h1><?php echo "Hello World, this is written in php"?></h1>
 
 <p>Port 8080 for app, 8081 for phpmyadmin</p>
